@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Verdana, Geneva, sans-serif;
+    }
+
+    #container {
+      width: 600px;
+      border: 1px solid grey;
+      padding: 10px;
+    }
+
+    #image {
+      float: left;
+      width: 400px;
+      height: 300px;
+      padding: 10px;
+    }
+
+    #imagetext {
+      height: 300px;
+      padding: 10px;
+    }
+
+    #nav {
+      text-align: center;
+      word-spacing: 15px;
+    }
+
+    #image {
+      padding: 10px;
+    }
+
+    #links {
+      line-height: 35px;
+    }
+
+    .content-container {
+      position: relative;
+      text-align: center;
+    }
+
+    .content {
+      display: none;
+      border: 2px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .content img {
+      width: 100%;
+      height: auto;
+    }
+
+    .top-stories {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: #fff;
+      padding: 5px;
+      font-size: 18px;
+    }
+  </style>
+  <title>Dynamic News Website</title>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#" onclick="showContent('family')">Family</a></li>
+    <li><a href="#" onclick="showContent('kids')">Kids</a></li>
+    <li><a href="#" onclick="showContent('food')">Food</a></li>
+    <li><a href="#" onclick="showContent('health')">Health</a></li>
+    <li><a href="#" onclick="showContent('movies')">Movies</a></li>
+  </ul>
+</nav>
+
+<div class="content-container" id="family">
+  <div class="top-stories">Top Stories</div>
+  <div class="content">
+    <h2>Family News</h2>
+    <img src="Family-Planning-1.jpg" alt="Family Image">
+    <p>Happy to be around my wife and kids.</p>
+  </div>
+</div>
+
+<div class="content-container" id="kids">
+  <div class="top-stories">Top Stories</div>
+  <div class="content">
+    <h2>Kids News</h2>
+    <img src="detailed-photo-of-young-african-american-children-while-playing-725x483.jpg" alt="Kids Image">
+    <p>Kids outside play, sister playing with her brother.</p>
+  </div>
+</div>
+
+<div class="content-container" id="food">
+  <div class="top-stories">Top Stories</div>
+  <div class="content">
+    <h2>Food News</h2>
+    <img src="Charcuterie-2-of-2.jpg" alt="Food Image">
+    <p>Best food you can get can make it with your family are buy it somewhere.</p>
+  </div>
+</div>
+
+<div class="content-container" id="health">
+  <div class="top-stories">Top Stories</div>
+  <div class="content">
+    <h2>Health News</h2>
+    <img src="624111.webp" alt="Health Image">
+    <p>This is the health everthing we will need without it we don't know what will happen to us.</p>
+  </div>
+</div>
+
+<div class="content-container" id="movies">
+  <div class="top-stories">Top Stories</div>
+  <div class="content">
+    <h2>Movies News</h2>
+    <img src="22-2.jpeg" alt="Movies Image">
+    <p>new movies are old movies anyone we will like them because without old movies there would not be new movies out.</p>
+  </div>
+</div>
+
+<script>
+  function showContent(id) {
+    // Hide all content divs
+    var contents = document.getElementsByClassName('content');
+    for (var i = 0; i < contents.length; i++) {
+      contents[i].style.display = 'none';
+    }
+
+    // Show the selected content div
+    document.getElementById(id).getElementsByClassName('content')[0].style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
+
